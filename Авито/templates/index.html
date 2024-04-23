@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <img src="https://topsov.com/wp-content/uploads/2022/01/foto-9-1.jpg" height="100">
+</div>
+<div class="container" align="center">
+    <div class="row">
+        {% for item in slides %}
+        <div class="col-sm-4">
+            <div class="card">
+                <img src={{item.img}} alt="Фото пока не загружено, обратитесь к продавцу">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="card-text">{{item.about_product}}</p>
+                    <a href="http://127.0.0.1:5000/product/{{item.id}}" class="btn btn-primary">Оформить заказ</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="media">
+    <img alt="Фото не загружено" class="align-self-center mr-3" src=src style="width: 32rem">
+    <div class="media-body">
+        <h5 class="mt-0">Описание</h5>
+        <p>{{prod.about_product}}</p>
+        <h5 class="mt-0">Регион</h5>
+        <p>Откуда взять регион в БД?</p>
+        <h5 class="mt-0">Продавец</h5>
+        <p>{{user.name}}</p>
+        <h5 class="mt-0">Контактный номер телефона</h5>
+        <p>{{user.number}}</p>
+        <h5 class="mt-0">Стоимость</h5>
+        <p>{{prod.price}}</p>
+    </div>
+</div>
+<div align="center">
+    <a href="/pokupka/{{prod.id}}"><button type="button" class="btn btn-warning">Купить</button></a>
+</div>
+{% endblock %}
